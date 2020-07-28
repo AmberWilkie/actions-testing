@@ -1,14 +1,13 @@
 # This is a basic workflow that is manually triggered
-
 name: Test reminder
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
-# on:
-#   # Trigger the workflow on push or pull request,
-#   # but only for the master branch
-#   pull_request:
-#     branches: [ master, main ]
+on: [push]
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  # pull_request:
+  #   branches: [ master, main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
