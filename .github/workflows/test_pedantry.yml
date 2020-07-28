@@ -21,5 +21,5 @@ jobs:
     - name: Webhook
       uses: jasongitmail/fast-webhook@v1
       with:
-        url: "http://amberrocks.ngrok.io/api/test_pedant"
-        json: '{"foo": "bar"}'
+        url: "http://amberrocks.ngrok.io/api/test_pedant?"
+        json: ${{github.event}}
