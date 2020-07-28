@@ -19,7 +19,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Webhook
-      uses: joelwmale/webhook-action@master
-      env:
-        WEBHOOK_URL: "http://amberrocks.ngrok.io/api/test_pedant"
-        data: "{'deployment': 'finished', 'project': 'actions'}"
+      uses: jasongitmail/fast-webhook@v1
+      with:
+        url: "http://amberrocks.ngrok.io/api/test_pedant"
+        json: '{"foo": "bar"}'
