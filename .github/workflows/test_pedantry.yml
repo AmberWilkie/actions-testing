@@ -1,10 +1,10 @@
-- name: Test Commentary
-  on:
-    # Trigger the workflow on push or pull request,
-    # but only for the master branch
-    pull_request:
-      branches: [ master, main ]
-  uses: joelwmale/webhook-action@master
-  env:
-    WEBHOOK_URL: "http://amberrocks.ngrok.io/api/test_pedant"
-    data: "{'deployment': 'finished', 'project': 'actions'}"
+name: Test Commentary
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  pull_request:
+    branches: [ master, main ]
+uses: joelwmale/webhook-action@master
+env:
+  WEBHOOK_URL: "http://amberrocks.ngrok.io/api/test_pedant"
+  data: "{'deployment': 'finished', 'project': 'actions'}"
