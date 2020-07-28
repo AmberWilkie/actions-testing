@@ -20,7 +20,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Webhook
-    uses: joelwmale/webhook-action@master
-    env:
-      WEBHOOK_URL: "http://localhost:7071/api/test_pedant"
-      data: "{'deployment': 'finished', 'project': 'actions'}"
+      uses: joelwmale/webhook-action@master
+      env:
+        WEBHOOK_URL: "http://localhost:7071/api/test_pedant"
+        data: "{'deployment': 'finished', 'project': 'actions'}"
