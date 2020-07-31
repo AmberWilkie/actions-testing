@@ -3,7 +3,7 @@ name: Test reminder dammit
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
-on: [push, pull_request]
+on: [pull_request]
   # Trigger the workflow on push or pull request,
   # but only for the master branch
   # pull_request:
