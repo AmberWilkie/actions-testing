@@ -3,7 +3,7 @@ name: Test reminder
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
-on: [push, pull_request]
+on: [pull_request]
   # Trigger the workflow on push or pull request,
   # but only for the master branch
   # pull_request:
@@ -22,4 +22,4 @@ jobs:
       uses: jasongitmail/fast-webhook@v1
       with:
         url: "http://amberrocks.ngrok.io/api/test_pedant"
-        json: '{"repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}"}'
+        json: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
