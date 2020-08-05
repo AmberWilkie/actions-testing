@@ -21,6 +21,7 @@ jobs:
       uses: joelwmale/webhook-action@master
       env:
         WEBHOOK_URL: "http://amberrocks.ngrok.io/api/test_pedant"
-        data: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
+        data: "${{github.event}}"
+        # data: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
 
         # blah blah blah
