@@ -25,5 +25,3 @@ jobs:
         webhook_secret: "none"
         # data: ${{github.event}}
         # data: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
-
-        # blah blah blah
