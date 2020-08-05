@@ -18,10 +18,9 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Webhook
-      uses: joelwmale/webhook-action@master
+      uses: distributhor/workflow-webhook@v1
       env:
-        WEBHOOK_URL: "http://amberrocks.ngrok.io/api/test_pedant"
-        data: "${{github.event}}"
-        # data: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
+        webhook_url: "http://amberrocks.ngrok.io/api/test_pedant"
+        data: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
 
         # blah blah blah
