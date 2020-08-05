@@ -24,4 +24,3 @@ jobs:
         webhook_url: "http://amberrocks.ngrok.io/api/test_pedant"
         webhook_secret: "none"
         data: '{ "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
-#dammit this is annoying
